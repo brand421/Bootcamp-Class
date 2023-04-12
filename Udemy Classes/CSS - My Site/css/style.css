@@ -5,15 +5,22 @@ body {
 }
 
 h1 {
-    font-family: 'Lobster', cursive;
-    margin-top: 0;
+    font-family: 'Dancing Script', cursive;
+    margin: 75px auto 0 auto;
+    font-size: 5.625rem;
+    color: #66BFBF;
 }
 
 h2 {
     font-family: 'Cabin', sans-serif;
+    font-size: 2.5rem;
+    margin: 30px auto 100px auto;
+    color: #66BFBF;
+    font-weight: normal;
 }
 
 h3 {
+    color: #11999E;
     font-family: 'Cabin', sans-serif;
 }
 
@@ -24,6 +31,15 @@ h3 {
 
 .mern-stack {
     width: 25%
+}
+
+.guitar-player {
+    width: 10%;
+}
+
+.attribute {
+    font-size: 10px;
+    text-decoration: none;
 }
 
 .top {

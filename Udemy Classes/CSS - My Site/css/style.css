@@ -30,16 +30,23 @@ h3 {
 }
 
 .mern-stack {
-    width: 25%
+    width: 35%;
+    float: left;
+    margin-right: 30px;
 }
 
 .guitar-player {
-    width: 10%;
+    width: 35%;
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 0px;
 }
 
 .attribute {
     font-size: 10px;
     text-decoration: none;
+    margin-top: 0;
+    float: right;
 }
 
 .top {
@@ -54,6 +61,21 @@ h3 {
     top: 50px;
 }
 
+.skills {
+    margin-bottom: 15%;
+}
+
+.skill-row {
+    margin: 100px auto 100px auto;
+    width: 50%;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.code-skill-description {
+    
+}
+
 .pro {
     text-decoration: underline;
 }
@@ -64,9 +86,3 @@ h3 {
     bottom: 300px;
 }
 
-.middle {
-}
-
-.bottom {
-
-}

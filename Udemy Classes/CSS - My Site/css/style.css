@@ -1,6 +1,7 @@
 body {
     margin: 0;
     text-align: center;
+    
     font-family: 'Crimson Text', serif;
 }
 
@@ -37,8 +38,13 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: #EAF6F6;
+}
+
 p {
     color: #40514E;
+    line-height: 2;
 }
 
 .headshot {
@@ -53,6 +59,7 @@ p {
 .intro-about-me {
     margin: auto;
     width: 25%;
+    
 }
 .mern-stack {
     width: 35%;
@@ -78,8 +85,12 @@ p {
 
 .top-cloud {
     position: absolute;
-    right: 300px;
+    right: 400px;
     top: 50px;
+}
+
+.middle {
+    margin: 100px 0;
 }
 
 .skills {
@@ -90,7 +101,6 @@ p {
     margin: 100px auto 100px auto;
     width: 50%;
     text-align: left;
-    line-height: 1.5;
 }
 
 .pro {
@@ -99,7 +109,7 @@ p {
 
 .bottom-cloud {
     position: absolute;
-    left: 300px;
+    left: 400px;
     bottom: 300px;
 }
 
@@ -155,6 +165,21 @@ p {
 .footer-link {
     color: #11999E;
     font-family: 'Cabin', sans-serif;
+    margin: auto 5px;
+}
+
+.github-icon {
+    width: 25px;
+    color:#11999E;
+    vertical-align: middle;
+    margin-bottom: 7px;
+}
+
+.linkedin-icon {
+    width: 25px;
+    color:#11999E;
+    vertical-align: middle;
+    margin-bottom: 7px;
 }
 
 .copyright {

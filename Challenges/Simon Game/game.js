@@ -2,12 +2,14 @@
 var buttonColors = ["red", "green", "blue", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
+var started = false;
 var level = 0;
 
 $(document).keydown(function() {
-    $("#level-title").text("Level " + level);
-    while (level < 1 ) {
+    if (!started) {
+        $("#level-title").text("Level " + level);
         nextSequence();
+        started = true;
     }
 })
 
@@ -17,18 +19,22 @@ $(".btn").click(function() {
 
     playSound(userChosenColor);
     animatePress(userChosenColor);
-    checkAnswer(userClickedPattern[-1]);
+    checkAnswer(userClickedPattern.length-1);
 })
 
 function nextSequence() {
+
+    userClickedPattern = [];
+    level += 1;
+    $("#level-title").text("Level " + level);
 
     var randomNumber = Math.floor(Math.random()*4);
     var randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
 
     $("#"+ randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);  
-    level += 1;
-    $("#level-title").text("Level " + level);
+    playSound(randomChosenColor);
+    
 }
 
 function playSound(name) {
@@ -44,11 +50,13 @@ function animatePress(currentColor) {
 }
 
 function checkAnswer(currentLevel) {
-    if(currentLevel === gamePattern[-1]) {
-        console.log("success!");
-        setTimeout(function() {
+    if(gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+        console.log("success");
+        if (userClickedPattern.length === gamePattern.length) {
+          setTimeout(function() {
             nextSequence();
-        }, 1000)
+            }, 1000)  
+        }
     } else {
         console.log("fail!");
     }

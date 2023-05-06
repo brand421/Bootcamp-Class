@@ -12,15 +12,14 @@ app.get("/", function(req, res) {
             const weatherData = JSON.parse(data);
             const temp = weatherData.main.temp;
             const descr = weatherData.weather[0].description;
-            console.log(descr);
-            console.log(weatherData);
-            
-        })
+            const icon = weatherData.weather[0].icon;
+            res.write("<h2>The weather is currently " + descr + "</h2>");
+            res.write("<h1>The temperature in Grand Rapids is " + temp + " degrees Fahrenheit." + icon + "</h1>");
+            // res.write(icon);
+            res.send();          
+        });
     });
-    res.send("Server is up and running");
 })
-
-
 
 app.listen(3000, function() {
     console.log("Server is running on port 3000");
